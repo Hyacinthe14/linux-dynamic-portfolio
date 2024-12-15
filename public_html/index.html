@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>HKN Personal Portfolio</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="assets/css/meyawo.css">
+    <style>
+        body[data-theme='light'] {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+            --border-color: #dee2e6;
+        }
+    
+        body[data-theme='dark'] {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+            --card-bg: #2d2d2d;
+            --border-color: #404040;
+        }
+        body[data-theme='dark'] input,
+    body[data-theme='dark'] textarea,
+    body[data-theme='dark'] .modal-title,
+    body[data-theme='dark'] label,
+    body[data-theme='dark'] .section-title,
+    body[data-theme='dark'] .section-subtitle,
+    body[data-theme='dark'] .header-title,
+    body[data-theme='dark'] .header-subtitle,
+    body[data-theme='dark'] .about-caption p,
+    body[data-theme='dark'] .service-card .subtitle,
+    body[data-theme='dark'] .blog-card-title,
+    body[data-theme='dark'] .testimonial-card-title,
+    body[data-theme='dark'] .pricing-card-title {
+        color: #ffffff;
+    }
+
+    body[data-theme='dark'] input:disabled {
+        background-color: #2d2d2d;
+        text-color: #ffffff;
+    }
+    
+    
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+    
+        .card, .modal-content {
+            background-color: var(--card-bg);
+            border-color: var(--border-color);
+        }
+    
+        .table {
+            color: var(--text-color);
+        }
+    </style>    
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">HKN</a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Professional Summary</a>
+                </li>
+                <li class="item dropdown">
+                    <a class="link dropdown-toggle" href="#" id="backgroundDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Background
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="backgroundDropdown">
+                        <a class="dropdown-item" href="#education">Education Background</a>
+                        <a class="dropdown-item" href="#experience">Experience Background</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <a class="link" href="#blog">Skills</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#certificates">Certificates</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
+                </li>
+                <li class="item">
+                    <div id="theme-toggle" style="cursor: pointer; padding: 8px; border-radius: 50%; background: transparent; transition: all 0.3s ease;" onclick="toggleTheme()">
+                        <i class="ti-shine" style="font-size: 20px; transition: all 0.3s ease;"></i>
+                    </div>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">Hi!</span>
+                <span class="down">I am KWIZERA N. Hyacinthe</span>
+            </h1>
+            <p class="header-subtitle">FRONTEND WEB DESIGNER & DEVELOPER</p>            
+            <a href="users.html" class="btn btn-primary">Meet My Team</a>
+        </div>              
+    </header><!-- end of page header -->
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="assets/imgs/hkn.jpeg" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        I am a passionate Frontend Web Designer and Developer with expertise in creating responsive and user-friendly web interfaces. My focus is on delivering clean, efficient code and exceptional user experiences.
+                        <br>
+                        With strong problem-solving skills and attention to detail, I transform design concepts into fully functional websites. I stay current with the latest web technologies and best practices to deliver modern, innovative solutions.              
+                    </p>
+                    <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- service section -->
+    <section class="section" id="service">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Do ?</p>
+            <h6 class="section-title mb-6">Service</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/pencil-case.svg" class="icon">
+                            <h6 class="title">Web Design</h6>
+                            <p class="subtitle">Creating visually appealing and user-friendly website designs that engage visitors and drive conversions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/responsive.svg" class="icon">
+                            <h6 class="title">Responsive Development</h6>
+                            <p class="subtitle">Building mobile-first websites that work flawlessly across all devices and screen sizes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/toolbox.svg" class="icon">
+                            <h6 class="title">UI/UX Design</h6>
+                            <p class="subtitle">Crafting intuitive user interfaces and experiences that enhance user engagement and satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/analytics.svg" class="icon">
+                            <h6 class="title">Performance Optimization</h6>
+                            <p class="subtitle">Optimizing website performance for faster loading times and better user experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of row -->
+        </div>
+    </section><!-- end of service section -->
+<!-- Professional Summary Section -->
+<section class="section" id="professional-summary">
+    <div class="container text-center">
+        <p class="section-subtitle">What I Did ?</p>
+        <h6 class="section-title mb-6">Professional Summary</h6>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#" class="portfolio-card">
+                    <img src="assets/imgs/folio-1.jpg" class="portfolio-card-img">    
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>Web Development</h4>
+                            <p>Experienced software developer building innovative and user-friendly applications</p>
+                        </span>                         
+                    </span>                     
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="portfolio-card">
+                    <img class="portfolio-card-img" src="assets/imgs/folio-2.jpg">
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>Programming Skills</h4>
+                            <p>Proficient in multiple programming languages and frameworks</p>
+                        </span>                         
+                    </span>                         
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="portfolio-card">
+                    <img class="portfolio-card-img" src="assets/imgs/folio-3.jpg">    
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>Quality Solutions</h4>
+                            <p>Focus on delivering high-quality, efficient solutions</p>
+                        </span>                         
+                    </span>                     
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Background Sections with Service Cards -->
+<section class="section" id="education">
+    <div class="container text-center">
+        <p class="section-subtitle">Educational Journey</p>
+        <h6 class="section-title mb-6">Education Background</h6>
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="assets/imgs/pencil-case.svg" class="icon">
+                        <h6 class="title">Bachelor of Science</h6>
+                        <p class="subtitle">Computer Science<br>University of Example<br>2016 - 2020</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="assets/imgs/responsive.svg" class="icon">
+                        <h6 class="title">Responsive Development</h6>
+                        <p class="subtitle">Building mobile-first websites that work flawlessly across all devices and screen sizes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="assets/imgs/toolbox.svg" class="icon">
+                        <h6 class="title">UI/UX Design</h6>
+                        <p class="subtitle">Crafting intuitive user interfaces and experiences that enhance user engagement and satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="assets/imgs/analytics.svg" class="icon">
+                        <h6 class="title">Performance Optimization</h6>
+                        <p class="subtitle">Optimizing website performance for faster loading times and better user experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section with Testimonial Cards Style -->
+<section class="section" id="experience">
+    <div class="container text-center">
+        <p class="section-subtitle">Professional Journey</p>
+        <h6 class="section-title mb-6">Experience Background</h6>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-img-holder">
+                        <img src="assets/imgs/avatar2.jpg" class="testimonial-card-img">                           
+                    </div>
+                    <div class="testimonial-card-body">
+                        <h6 class="testimonial-card-title">Software Developer</h6>
+                        <p class="testimonial-card-subtitle">
+                            Example Company, 2020 - Present<br>
+                            • Developed web applications using HTML, CSS, and JavaScript<br>
+                            • Collaborated with cross-functional teams<br>
+                            • Conducted code reviews and unit testing
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section with Blog Cards Style -->
+<section class="section" id="skills">
+    <div class="container text-center">
+        <p class="section-subtitle">Technical Expertise</p>
+        <h6 class="section-title mb-6">Skills</h6>
+        <div class="blog-card">
+            <div class="blog-card-header">
+                <img src="assets/imgs/img-1.jpg" class="blog-card-img">
+            </div>
+            <div class="blog-card-body">
+                <h5 class="blog-card-title">Programming Languages</h5>
+                <p>JavaScript • Python • Java</p>
+                <h5 class="blog-card-title">Frameworks and Libraries</h5>
+                <p>React • Angular • Django</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certificates Section with Pricing Cards Style -->
+<section class="section" id="certificates">
+    <div class="container text-center">
+        <p class="section-subtitle">Professional Certifications</p>
+        <h6 class="section-title mb-6">Certificates</h6>
+        <div class="pricing-wrapper">
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <img class="pricing-card-icon" src="assets/imgs/startup.svg">
+                </div>
+                <div class="pricing-card-body">
+                    <h6 class="pricing-card-title">Certified Software Developer</h6>
+                    <p>Example Certification Authority, 2022</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">How can you communicate?</p>
+            <h6 class="section-title mb-5">Contact Me</h6>
+            <!-- contact form -->
+            <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>                 
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input type="email" class="form-control" placeholder="Enter Email"requried>                 
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <textarea name="comment" id="comment" rows="6"   class="form-control" placeholder="Write Something"></textarea>
+                    </div>
+                    <div class="form-group col-sm-12 mt-3">
+                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">                  
+                    </div>
+                </div>  
+            </form><!-- end of contact form -->
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">HKN</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://www.facebook.com/kwizerandiho.hyacinthe/" class="link"><i class="ti-facebook"></i></a>
+                <a href="https://x.com/Hyacinthe14_off" class="link"><i class="ti-twitter-alt"></i></a>
+                <a href="mailto:hyacinthekwizerandiho@gmail.com" class="link"><i class="ti-google"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                <a href="https://www.instagram.com/kn_hyacinthe/" class="link"><i class="ti-instagram"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+    <script>
+        // Check initial theme
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', currentTheme);
+        updateIcon();
+    
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon();
+        }
+    
+        function updateIcon() {
+            const toggle = document.getElementById('theme-toggle');
+            const icon = toggle.querySelector('i');
+            const isDark = document.body.getAttribute('data-theme') === 'dark';
+            
+            toggle.style.background = isDark ? '#ffffff20' : '#00000010';
+            
+            // Update icon based on the page
+            if (icon.classList.contains('ti-shine')) {
+                icon.className = isDark ? 'ti-moon' : 'ti-shine';
+            } else {
+                icon.className = isDark ? 'bi bi-moon-stars' : 'bi bi-brightness-high';
+            }
+        }
+    </script>
+    
+
+</body>
+</html>

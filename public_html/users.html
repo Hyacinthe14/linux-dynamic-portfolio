@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--Bootstrap 5 icons CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <title>Our Team</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+    body[data-theme='light'] {
+        --bg-color: #ffffff;
+        --text-color: #333333;
+        --card-bg: #ffffff;
+        --border-color: #dee2e6;
+    }
+
+    body[data-theme='dark'] {
+        --bg-color: #1a1a1a;
+        --text-color: #ffffff;
+        --card-bg: #2d2d2d;
+        --border-color: #404040;
+    }
+    body[data-theme='dark'] input,
+    body[data-theme='dark'] textarea,
+    body[data-theme='dark'] .modal-title,
+    body[data-theme='dark'] label,
+    body[data-theme='dark'] .section-title,
+    body[data-theme='dark'] .section-subtitle,
+    body[data-theme='dark'] .header-title,
+    body[data-theme='dark'] .header-subtitle,
+    body[data-theme='dark'] .about-caption p,
+    body[data-theme='dark'] .service-card .subtitle,
+    body[data-theme='dark'] .blog-card-title,
+    body[data-theme='dark'] .testimonial-card-title,
+    body[data-theme='dark'] .pricing-card-title {
+        text-color: #ffffff;
+    }
+
+    body[data-theme='dark'] input:disabled {
+        background-color: #2d2d2d;
+        text-color: #ffffff;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: all 0.3s ease;
+    }
+
+    .card, .modal-content {
+        background-color: var(--card-bg);
+        border-color: var(--border-color);
+    }
+
+    .table {
+        color: var(--text-color);
+    }
+</style>
+
+  </head>
+  <body>
+    
+
+    <section class="p-3">
+
+        <div class="row">
+            <div class="col-1">
+                <div id="theme-toggle" style="cursor: pointer; padding: 8px; border-radius: 50%; background: transparent; transition: all 0.3s ease;" onclick="toggleTheme()">
+                    <i class="bi bi-brightness-high" style="font-size: 20px; transition: all 0.3s ease;"></i>
+                </div>
+            </div>            
+            <div class="col-12">
+                <button class="btn btn-primary newUser" data-bs-toggle="modal" data-bs-target="#userForm">New Member <i class="bi bi-people"></i></button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped table-hover mt-3 text-center table-bordered">
+
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Picture</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Post</th>
+                            <th>Start Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="data"></tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--Modal Form-->
+    <div class="modal fade" id="userForm">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Fill the Form</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form action="#" id="myForm">
+
+                        <div class="card imgholder">
+                            <label for="imgInput" class="upload">
+                                <input type="file" name="" id="imgInput">
+                                <i class="bi bi-plus-circle-dotted"></i>
+                            </label>
+                            <img src="./image/Profile Icon.webp" alt="" width="200" height="200" class="img">
+                        </div>
+
+                        <div class="inputField">
+                            <div>
+                                <label for="name">Name:</label>
+                                <input type="text" name="" id="name" required>
+                            </div>
+                            <div>
+                                <label for="age">Age:</label>
+                                <input type="number" name="" id="age" required>
+                            </div>
+                            <div>
+                                <label for="city">City:</label>
+                                <input type="text" name="" id="city" required>
+                            </div>
+                            <div>
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="" id="email" required>
+                            </div>
+                            <div>
+                                <label for="phone">Number:</label>
+                                <input type="text" name="" id="phone" minlength="13" maxlength="13" required>
+                            </div>
+                            <div>
+                                <label for="post">Post:</label>
+                                <input type="text" name="" id="post" required>
+                            </div>
+                            <div>
+                                <label for="sDate">Start Date:</label>
+                                <input type="date" name="" id="sDate" required>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="myForm" class="btn btn-primary submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Read Data Modal-->
+    <div class="modal fade" id="readData">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Profile</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form action="#" id="myForm">
+
+                        <div class="card imgholder">
+                            <img src="./image/Profile Icon.webp" alt="" width="200" height="200" class="showImg">
+                        </div>
+
+                        <div class="inputField">
+                            <div>
+                                <label for="name">Name:</label>
+                                <input type="text" name="" id="showName" disabled>
+                            </div>
+                            <div>
+                                <label for="age">Age:</label>
+                                <input type="number" name="" id="showAge" disabled>
+                            </div>
+                            <div>
+                                <label for="city">City:</label>
+                                <input type="text" name="" id="showCity" disabled>
+                            </div>
+                            <div>
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="" id="showEmail" disabled>
+                            </div>
+                            <div>
+                                <label for="phone">Number:</label>
+                                <input type="text" name="" id="showPhone" minlength="13" maxlength="13" disabled>
+                            </div>
+                            <div>
+                                <label for="post">Post:</label>
+                                <input type="text" name="" id="showPost" disabled>
+                            </div>
+                            <div>
+                                <label for="sDate">Start Date:</label>
+                                <input type="date" name="" id="showsDate" disabled>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="/assets/js/app.js"></script>
+    <script>
+        // Check initial theme
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', currentTheme);
+        updateIcon();
+    
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon();
+        }
+    
+        function updateIcon() {
+            const toggle = document.getElementById('theme-toggle');
+            const icon = toggle.querySelector('i');
+            const isDark = document.body.getAttribute('data-theme') === 'dark';
+            
+            toggle.style.background = isDark ? '#ffffff20' : '#00000010';
+            
+            // Update icon based on the page
+            if (icon.classList.contains('ti-shine')) {
+                icon.className = isDark ? 'ti-moon' : 'ti-shine';
+            } else {
+                icon.className = isDark ? 'bi bi-moon-stars' : 'bi bi-brightness-high';
+            }
+        }
+    </script>    
+  </body>
+</html>
